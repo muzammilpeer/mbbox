@@ -1,0 +1,1 @@
+http://localhost:8080/mbbox/connectors/php/filemanager.php?path=%2Fmbbox%2Fuserfiles%2F&mode=getfolder&showThumbs=true&time=856

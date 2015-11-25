@@ -1,0 +1,61 @@
+http://localhost/wsft/scripts/filemanager.config.js?_=1381945766698
+http://localhost/wsft/scripts/languages/en.js
+http://localhost/wsft/scripts/filemanager.liveSearch.min.js?_=1381945766769
+http://localhost/wsft/connectors/php/filemanager.php?path=%2Fwsft%2Fuserfiles%2F&mode=getfolder&showThumbs=true&time=783
+http://localhost/wsft/connectors/php/filemanager.php?path=%2Fwsft%2Fuserfiles%2F&mode=getfolder&showThumbs=true&time=821
+
+Example Request:
+[path to connector]?mode=getfolder&path=/UserFiles/Image/&getsizes=true
+[
+	"/UserFiles/Image/logo.png" = {
+		Path: "/UserFiles/Image/logo.png",
+		Filename: "logo.png",
+		File Type: "png",
+		Preview: "/UserFiles/Image/logo.png",
+		Properties: {
+			Date Created: null,
+			Date Modified: "02/09/2007 14:01:06",
+			Height: 14,
+			Width: 14,
+			Size: 384
+		},
+		Error: "",
+		Code: 0
+	},
+	"/UserFiles/Image/icon.png" = {
+		Path: "/UserFiles/Image/icon.png",
+		Filename: "icon.png",
+		File Type: "png",
+		Preview: "/UserFiles/Image/icon.png",
+		Properties: {
+			Date Created: null,
+			Date Modified: "02/09/2007 14:01:06",
+			Height: 14,
+			Width: 14,
+			Size: 384
+		},
+		Error: "",
+		Code: 0
+	}
+]
+Actual Result: for one folder record
+{"\/wsft\/userfiles\/mbboxFolder\/":
+	{"Path":"\/wsft\/userfiles\/mbboxFolder\/",
+	"Filename":"mbboxFolder",
+	"File Type":"dir",
+	"Preview":"images\/fileicons\/_Open.png",
+	"Properties":
+		{"Date Created":"12 Oct 2013 18:22",
+		"Date Modified":"12 Oct 2013 19:06",
+		"filemtime":1381604818,
+		"Height":null,
+		"Width":null,
+		"Size":null
+		},
+	"Error":"",
+	"Code":0
+	}
+}
+For many record found actual result :
+
+{"\/wsft\/userfiles\/mbboxFolder\/20130729_summerslam_HOMEPAGE_punk-brock.jpg":{"Path":"\/wsft\/userfiles\/mbboxFolder\/20130729_summerslam_HOMEPAGE_punk-brock.jpg","Filename":"20130729_summerslam_HOMEPAGE_punk-brock.jpg","File Type":"jpg","Preview":"connectors\/php\/filemanager.php?mode=preview&path=%2Fwsft%2Fuserfiles%2FmbboxFolder%2F20130729_summerslam_HOMEPAGE_punk-brock.jpg&thumbnail=true","Properties":{"Date Created":null,"Date Modified":"12 Oct 2013 19:02","Height":361,"Width":642,"Size":70545,"filemtime":1381604569},"Error":"","Code":0},"\/wsft\/userfiles\/mbboxFolder\/welcome_1.txt":{"Path":"\/wsft\/userfiles\/mbboxFolder\/welcome_1.txt","Filename":"welcome_1.txt","File Type":"txt","Preview":"images\/fileicons\/txt.png","Properties":{"Date Created":null,"Date Modified":"12 Oct 2013 00:57","Height":null,"Width":null,"Size":134,"filemtime":1381539472},"Error":"","Code":0}}

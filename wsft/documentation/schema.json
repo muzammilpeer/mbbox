@@ -1,0 +1,31 @@
+mb_user
+{
+ userid,firstname,lastname,security_code,homedirectoryid,lastmodified
+}
+//my bucketname use conventation for defination of region
+mb_bucket
+{
+	mbbucketid,name,regionid,
+}
+mb_region
+{
+	mbregionid,regionname,bucketit
+}
+mb_file
+{
+ fileid,filename,filetype,filesize,filewidth,fileheight,datecreated,datemodified,parentid,bucket_name,bucket_filename,regioniid,
+}
+mb_log_file_access
+{
+	logid,userid,filepath,region,bucket,access_time
+}
+
+mb_logs;
+
+
+db.testing.insert(  
+{"\/wsft\/userfiles\/mbboxFolder\/":{"Path":"\/wsft\/userfiles\/mbboxFolder\/","Filename":"mbboxFolder","File Type":"dir","Preview":"images\/fileicons\/_Open.png","Properties":{"Date Created":"19 Oct 2013 15:15","Date Modified":"19 Oct 2013 15:15","filemtime":1382210116,"Height":null,"Width":null,"Size":null},"Error":"","Code":0}}
+);
+db.ntesting.insert(  
+{"Folder":{"Path":"\/wsft\/userfiles\/mbboxFolder\/20130729_summerslam_HOMEPAGE_punk-brock.jpg","Filename":"20130729_summerslam_HOMEPAGE_punk-brock.jpg","File Type":"jpg","Preview":"connectors\/php\/filemanager.php?mode=preview&path=%2Fwsft%2Fuserfiles%2FmbboxFolder%2F20130729_summerslam_HOMEPAGE_punk-brock.jpg&thumbnail=true","Properties":{"Date Created":null,"Date Modified":"12 Oct 2013 15:02","Height":361,"Width":642,"Size":70545,"filemtime":1381604569},"Error":"","Code":0},"Folder":{"Path":"\/wsft\/userfiles\/mbboxFolder\/welcome_1.txt","Filename":"welcome_1.txt","File Type":"txt","Preview":"images\/fileicons\/txt.png","Properties":{"Date Created":null,"Date Modified":"11 Oct 2013 20:57","Height":null,"Width":null,"Size":134,"filemtime":1381539472},"Error":"","Code":0}}
+);

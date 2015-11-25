@@ -1,0 +1,150 @@
+use mbbox;
+
+/*		$document = array(
+			"FirstName" => "Muzammil",
+			"LastName" => "Peer",
+			"NickName" => "Muzammil Peer",
+			"Email" => "muzammilpeer987@gmail.com",
+			"Password" => "!test!123",
+			"HomeDirId" => "526d29410e7cd9409c00d6bf",
+			"DateCreated" => "05 Jul 2013 08:25",
+			"DateModified" => "05 Jul 2013 08:25",
+			"SecurityKey" => "Programmer",
+			"Active"=> true
+		);
+*/
+
+db.createCollection("user");
+db.user.insert({
+    "FirstName": "Muzammil",
+    "LastName": "Peer",
+    "NickName": "Muzammil Peer",
+    "Email": "muzammilpeer987@gmail.com",
+    "Password": "!test!123",
+    "HomeDirId": "526d29410e7cd9409c00d6bf",
+	"DateCreated":"05 Jul 2013 08:25",
+	"DateModified":"05 Jul 2013 08:25",
+    "SecurityKey": "Programmer",
+    "Active": true
+});
+db.user.ensureIndex( { "Email": 1 }, { unique: true } );
+
+db.createCollection("record");
+use mbbox;
+db.record.insert({
+	"UserId" : "526d29410e7cd9409c00d6bf",
+    "Path": "/",
+    "Filename": "bootstrap-2.3.2.zip",
+    "File Type": "zip",
+    "Preview": "images/fileicons/zip.png",
+    "Error": "",
+    "Code": 0,
+    "Http": "https://s3-us-west-2.amazonaws.com/mbbox/asigment.txt.1383998275",
+    "Mime Type": "application/txt",
+    "Encoded Name": ""
+    "Active": true,
+    "Properties": 
+	 {
+		"DateCreated":"05 Jul 2013 08:25",
+		"DateModified":"05 Jul 2013 08:25",
+		"Filemtime":1373027110,
+		"Height":210,
+		"Width":100,
+		"Size":12045
+	}
+});
+
+
+db.record.insert({
+	"UserId" : "526d29410e7cd9409c00d6bf",
+    "Path": "/",
+    "Filename": "mbbox",
+    "File Type": "dir",
+    "Preview": "images/fileicons/_Open.png",
+    "Error": "",
+    "Code": 0,
+    "Active": true,
+    "Properties": 
+	 {
+		"DateCreated":"05 Jul 2013 08:25",
+		"DateModified":"05 Jul 2013 08:25",
+		"Filemtime":1373027110,
+		"Height":210,
+		"Width":100,
+		"Size":12045
+	}
+});
+db.record.insert({
+	"UserId" : "526d29410e7cd9409c00d6bf",
+    "Path": "/mbbox/",
+    "Filename": "new",
+    "File Type": "dir",
+    "Preview": "images/fileicons/_Open.png",
+    "Error": "",
+    "Code": 0,
+    "Active": true,
+    "Properties": 
+	 {
+		"DateCreated":"05 Jul 2013 08:25",
+		"DateModified":"05 Jul 2013 08:25",
+		"Filemtime":1373027110,
+		"Height":210,
+		"Width":100,
+		"Size":12045
+	}
+});
+
+db.record.insert({
+	"UserId" : "526d29410e7cd9409c00d6bf",
+    "Path": "/mbbox/",
+    "Filename": "index.php",
+    "File Type": "php",
+    "Preview": "images/fileicons/php.png",
+    "Error": "",
+    "Code": 0,
+    "Active": true,
+    "Properties": 
+	 {
+		"DateCreated":"05 Jul 2013 08:25",
+		"DateModified":"05 Jul 2013 08:25",
+		"Filemtime":1373027110,
+		"Height":210,
+		"Width":100,
+		"Size":12045
+	}
+});
+
+db.record.insert({
+	"UserId" : "526d29410e7cd9409c00d6bf",
+    "Path": "/mbbox/new/",
+    "Filename": "testing.php",
+    "File Type": "php",
+    "Preview": "images/fileicons/php.png",
+    "Error": "",
+    "Code": 0,
+    "Active": true,
+    "Properties": 
+	 {
+		"DateCreated":"05 Jul 2013 08:25",
+		"DateModified":"05 Jul 2013 08:25",
+		"Filemtime":1373027110,
+		"Height":210,
+		"Width":100,
+		"Size":12045
+	}
+});
+
+db.record.find({Path:/\/mbbox\//});
+
+
+{"\/bootstrap-2.3.2.zip":{"Path":"\/bootstrap-2.3.2.zip","Filename":"bootstrap-2.3.2.zip","File Type":"zip","Preview":"images\/fileicons\/zip.png","Properties":{"Date Created":null,"Date Modified":"27 Oct 2013 11:30","Height":null,"Width":null,"Size":3305006,"filemtime":1382887811},"Error":"","Code":0},
+"\/favicon.ico":{"Path":"\/favicon.ico","Filename":"favicon.ico","File Type":"ico","Preview":"images\/fileicons\/default.png","Properties":{"Date Created":null,"Date Modified":"05 Jul 2013 08:25","Height":null,"Width":null,"Size":null,"filemtime":1373027110},"Error":"","Code":0},
+"\/index.php":{"Path":"\/index.php","Filename":"index.php","File Type":"php","Preview":"images\/fileicons\/php.png","Properties":{"Date Created":null,"Date Modified":"28 Sep 2013 13:27","Height":null,"Width":null,"Size":411,"filemtime":1380389256},"Error":"","Code":0},
+"\/moadmin.php":{"Path":"\/moadmin.php","Filename":"moadmin.php","File Type":"php","Preview":"images\/fileicons\/php.png","Properties":{"Date Created":null,"Date Modified":"27 May 2013 20:08","Height":null,"Width":null,"Size":113923,"filemtime":1369699732},"Error":"","Code":0},
+"\/MongoSession-master.zip":{"Path":"\/MongoSession-master.zip","Filename":"MongoSession-master.zip","File Type":"zip","Preview":"images\/fileicons\/zip.png","Properties":{"Date Created":null,"Date Modified":"19 Oct 2013 11:31","Height":null,"Width":null,"Size":5392,"filemtime":1382196667},"Error":"","Code":0},
+"\/phpmoadmin.zip":{"Path":"\/phpmoadmin.zip","Filename":"phpmoadmin.zip","File Type":"zip","Preview":"images\/fileicons\/zip.png","Properties":{"Date Created":null,"Date Modified":"26 Oct 2013 15:37","Height":null,"Width":null,"Size":27587,"filemtime":1382816224},"Error":"","Code":0},
+"\/webmin.rpm":{"Path":"\/webmin.rpm","Filename":"webmin.rpm","File Type":"rpm","Preview":"images\/fileicons\/default.png","Properties":{"Date Created":null,"Date Modified":"19 Oct 2013 13:33","Height":null,"Width":null,"Size":null,"filemtime":1382203982},"Error":"","Code":0},
+"\/2.3-stable\/":{"Path":"\/2.3-stable\/","Filename":"2.3-stable","File Type":"dir","Preview":"images\/fileicons\/_Open.png","Properties":{"Date Created":"27 Oct 2013 05:47","Date Modified":"27 Oct 2013 05:49","filemtime":1382867358,"Height":null,"Width":null,"Size":null},"Error":"","Code":0},
+"\/bootstrap-2.3.2\/":{"Path":"\/bootstrap-2.3.2\/","Filename":"bootstrap-2.3.2","File Type":"dir","Preview":"images\/fileicons\/_Open.png","Properties":{"Date Created":"27 Oct 2013 11:30","Date Modified":"27 Oct 2013 11:30","filemtime":1382887843,"Height":null,"Width":null,"Size":null},"Error":"","Code":0},
+"\/mbbox\/":{"Path":"\/mbbox\/","Filename":"mbbox","File Type":"dir","Preview":"images\/fileicons\/_Open.png","Properties":{"Date Created":"27 Oct 2013 09:43","Date Modified":"27 Oct 2013 14:37","filemtime":1382899049,"Height":null,"Width":null,"Size":null},"Error":"","Code":0},
+}

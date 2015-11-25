@@ -1,0 +1,18 @@
+<?php
+
+require_once 'SessionHandler/initSession.php';
+require_once 'SessionHandler/Zebra_Session.php';
+
+class Membership {
+	private $mysql;
+
+	function __construct() {
+	 $this->mysql = new Mysql();
+	}
+
+	function validate_user($un, $pwd) {
+		$result = $this->mysql->login_Username_and_Pass($un,$pwd);
+		return $result;
+	} 
+}
+?>
